@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body { margin:0; height:100%; background:#000; overscroll-behavior:none; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif; -webkit-text-size-adjust:100%; }
+/* search boxes: no iOS default styling or extra clear button */
+input[type="search"] { -webkit-appearance: none; appearance: none; }
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; display: none; }
