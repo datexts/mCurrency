@@ -5,6 +5,9 @@
 - Only when something can't be done from here (e.g. clicking in Xcode on his Mac, App Store Connect,
   signing), tell him exactly what to do, step by step, and he will follow.
 - The same applies to his other apps.
+- Claude works in the cloud and can't write to his Mac. He copies changes over himself, so after every
+  push tell him where to get them: repo, branch, ZIP download link, and the list of changed files
+  with their path in his Mac folder (/Users/martin/Documents/iOS Apps Store/mCurrency/).
 - Chat with him in Cantonese (Traditional Chinese). Code, comments and commits stay in English.
 
 ## iOS release notes
