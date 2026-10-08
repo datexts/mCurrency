@@ -624,7 +624,7 @@ export default function App(){
               </div>
 
               {/* chart svg - real Frankfurter history */}
-              <div className="mt-3 h-[130px] w-full relative">
+              <div className="mt-3 h-[130px] [@media(max-height:700px)]:h-[90px] w-full relative">
                 {chartData ? (
                   <svg viewBox="0 0 300 120" className="w-full h-full">
                     <defs>
@@ -684,9 +684,10 @@ export default function App(){
                 </button>
               </div>
 
-              <div className={`mt-4 rounded-2xl p-4 ${isDark?'bg-[#1C1C1E]':'bg-[#F2F2F7]'}`}>
-                <div className="flex justify-between text-[13px] text-[#8E8E93]"><span>Low</span><span>High</span></div>
-                <div className="flex justify-between mt-1"><span className={`font-semibold tabular-nums ${isDark?'text-white':'text-black'}`}>{chartData ? formatRate(chartData.min) : '-'}</span><span className={`font-semibold tabular-nums ${isDark?'text-white':'text-black'}`}>{chartData ? formatRate(chartData.max) : '-'}</span></div>
+              {/* bigger text, less padding: same height as before so the page still fits without scrolling */}
+              <div className={`mt-4 rounded-2xl px-4 py-3 ${isDark?'bg-[#1C1C1E]':'bg-[#F2F2F7]'}`}>
+                <div className="flex justify-between text-[15px] text-[#8E8E93]"><span>Low</span><span>High</span></div>
+                <div className="flex justify-between mt-1 text-[22px] leading-tight"><span className={`font-semibold tabular-nums ${isDark?'text-white':'text-black'}`}>{chartData ? formatRate(chartData.min) : '-'}</span><span className={`font-semibold tabular-nums ${isDark?'text-white':'text-black'}`}>{chartData ? formatRate(chartData.max) : '-'}</span></div>
               </div>
             </div>
           )}
@@ -1098,7 +1099,7 @@ export default function App(){
                   <h3 className={`text-[13px] font-bold uppercase tracking-widest mb-3 ${isDark?'text-white':'text-black'}`}>Featured</h3>
                   <div className="space-y-3">
                     {[
-                      {ic:'💱', t:'149 Currencies + Gold & Silver', d:'Currency rates from official sources (central banks). Gold and silver prices for reference. Pick any base currency'},
+                      {ic:'💱', t:'149 Currencies + Gold & Silver', d:'Currency rates from public sources (mostly central banks). Gold and silver prices for reference. Pick any base currency'},
                       {ic:'📈', t:'Chart', d:'Real rate history: 1W, 1M, 3M, 6M, 1Y, 2Y. Switch any pair from the chart screen'},
                       {ic:'🧮', t:'Calculator', d:'Tap any amount to open a full calculator, then Convert to apply it'},
                       {ic:'🌓', t:'Dark / Light', d:'Auto follows system, or force Light / Dark from Settings'},
